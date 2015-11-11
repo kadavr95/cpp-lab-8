@@ -8,7 +8,10 @@ void main( )
 	  char allowed[]="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890-_.";
 	  cout<<"Enter e-mail: ";
 	  cin.getline(s,100);
-
+	  do
+		i++;
+	  while (s[i]!='@');
+	  i++;
 	  while (s[i]!='\0')
 		{
 		   j=0;
