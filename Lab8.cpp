@@ -10,23 +10,28 @@ void main( )
 	  cin.getline(s,100);
 	  do
 		i++;
-	  while (s[i]!='@');
-	  i++;
-	  while (s[i]!='\0')
-		{
-		   j=0;
-		   while (allowed[j]!=0 &&  allowed[j]!=s[i])
-			  j++;
-		   if (allowed[j]=='\0')
-		   {
-			  cout<<"Invalid e-mail address!";
-			  break;
-		   }
-		   i++;
-		}
-	  if (s[i]=='\0')
+	  while ((s[i]!='@') & (s[i]!='\0'));
+	  if (s[i]!='\0')
 	  {
-			cout<<"E-mail is correct";
+		  i++;
+		  while (s[i]!='\0')
+			{
+			   j=0;
+			   while (allowed[j]!=0 &&  allowed[j]!=s[i])
+				  j++;
+			   if (allowed[j]=='\0')
+			   {
+				  cout<<"Invalid e-mail address!";
+				  break;
+			   }
+			   i++;
+			}
+		  if (s[i]=='\0')
+		  {
+				cout<<"E-mail is correct";
+		  }
 	  }
+	  else
+      cout<<"Invalid e-mail address!";
 	  getch();
 }
