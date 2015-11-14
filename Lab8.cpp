@@ -11,9 +11,9 @@ void main( )
 	  do
 		i++;
 	  while ((s[i]!='@') & (s[i]!='\0'));
+	  i++;
 	  if (s[i]!='\0')
 	  {
-		  i++;
 		  while (s[i]!='\0')
 			{
 			   j=0;
